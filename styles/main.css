@@ -1,0 +1,273 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004d40; /* Deep Forest Green */
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-left: 2rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover, .nav-list a.active {
+    color: #00796b; /* Lighter Emerald Green */
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080/228B22/FFFFFF?text=Green+Energy');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #00796b;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+.page-header {
+    background-color: #e0f2f1;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.page-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Services Summary */
+.services-summary {
+    background-color: #fff;
+}
+
+.services-summary h2, .trust-section h2, .accreditations h2, .process-flow h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.service-blocks {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.service-block {
+    flex-basis: 30%;
+}
+
+.service-block img {
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+/* Trust Section */
+.trust-section .logos, .accreditations .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+    background-color: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Services Page */
+.service-details .service-item {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.process-flow .flow-diagram {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flow-step {
+    text-align: center;
+}
+.flow-step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #00796b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+.flow-arrow {
+    font-size: 2rem;
+    color: #00796b;
+}
+
+/* Projects Page */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.filter-btn {
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+.filter-btn.active {
+    background: #00796b;
+    color: white;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.project-card img {
+    width: 100%;
+    display: block;
+}
+.project-card .card-content {
+    padding: 1.5rem;
+}
+
+/* About Page */
+.about-section {
+    margin-bottom: 3rem;
+}
+.team-section .team-members {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* Contact Page */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.contact-form form .form-group {
+    margin-bottom: 1.5rem;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Simple hiding for now, can be replaced with a burger menu */
+    }
+    .service-blocks, .team-members, .flow-diagram {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
