@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | Sustainability Consulting</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Our Projects</h1>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+        </div>
+        <section class="project-gallery">
+            <div class="project-card" data-category="commercial">
+                <img src="https://via.placeholder.com/350x200.png?text=Commercial" alt="Project 1">
+                <div class="project-info">
+                    <h3>Commercial Building</h3>
+                    <p><strong>Certification:</strong> LEED Platinum</p>
+                    <p><strong>Metric:</strong> 40% Energy Reduction</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="residential">
+                <img src="https://via.placeholder.com/350x200.png?text=Residential" alt="Project 2">
+                <div class="project-info">
+                    <h3>Residential Complex</h3>
+                    <p><strong>Certification:</strong> IGBC Green Homes</p>
+                    <p><strong>Metric:</strong> 60% Water Savings</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="corporate">
+                <img src="https://via.placeholder.com/350x200.png?text=Corporate" alt="Project 3">
+                <div class="project-info">
+                    <h3>Corporate Campus</h3>
+                    <p><strong>Certification:</strong> GRIHA 5 Star</p>
+                    <p><strong>Metric:</strong> 50% Reduction in Carbon Footprint</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

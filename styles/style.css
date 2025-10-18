@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #004d40; /* Deep forest green */
+    --secondary-color: #00b0ff; /* Sky blue */
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --light-gray: #f4f4f4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1920x1080.png?text=Green+Buildings');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4em 2em;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.services-summary, .trust-section, .detailed-services, .project-gallery, .mission-vision, .team, .contact-form-section, .map-section, .accreditations-section {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.service-blocks, .certification-logos, .team-members, .accreditation-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.service-block, .service-item, .project-card, .team-member {
+    background-color: var(--light-gray);
+    padding: 2em;
+    border-radius: 5px;
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.trust-section img, .accreditation-logos img {
+    height: 60px;
+}
+
+.project-card img, .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ccc;
+}
+
+.filter-buttons {
+    margin-bottom: 2em;
+}
+
+.filter-btn {
+    background-color: var(--light-gray);
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0.5em;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.process-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.flow-step {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.flow-arrow {
+    margin: 0 1em;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .service-blocks, .certification-logos, .team-members, .accreditation-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
