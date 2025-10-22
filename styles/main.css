@@ -51,7 +51,26 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    position: relative;
     transition: color 0.3s ease;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00796b;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-list a:hover::after, .nav-list a.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .nav-list a:hover, .nav-list a.active {
@@ -71,6 +90,7 @@ body {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    min-height: 90px; /* Allocate space for typing animation */
 }
 
 .hero-content p {
@@ -84,18 +104,22 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.2s ease-in-out;
     display: inline-block;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
     background-color: #00796b;
     color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn-primary:hover {
     background-color: #004d40;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 /* Sections */
@@ -199,9 +223,7 @@ section {
 .filter-btn {
     background: #e0e0e0;
     color: #333;
-    border: none;
     margin: 0 0.5rem;
-    cursor: pointer;
 }
 .filter-btn.active {
     background: #00796b;
@@ -217,6 +239,11 @@ section {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
 }
 .project-card img {
     width: 100%;
@@ -269,5 +296,9 @@ section {
     }
     .contact-container {
         grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+        min-height: 120px;
     }
 }

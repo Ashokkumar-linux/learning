@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             updateActiveLink(normalizedPath);
+            // Dispatch a custom event to signal that the page is loaded
+            mainContent.dispatchEvent(new CustomEvent('page-loaded', { bubbles: true }));
 
         } catch (error) {
             mainContent.innerHTML = '<p>Error loading page. Please try again.</p>';
