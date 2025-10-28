@@ -3,20 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Building Certifications</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GreenBuild Consulting - Accelerate Your Green Building Certification</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Green Building Certifications</h1>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">GreenBuild</a>
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="/services" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="/projects" class="nav-link" data-page="projects">Our Projects</a></li>
+                    <li><a href="/about" class="nav-link" data-page="about">About Us</a></li>
+                    <li><a href="/contact" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section id="certs">
-            <h2>Our Certifications</h2>
-            <div class="cert-grid">
-                </div>
-        </section>
+
+    <main id="main-content">
+        <!-- Content will be loaded here dynamically -->
     </main>
-    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GreenBuild Consulting. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/router.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out', // default easing for AOS animations
+            once: true // whether animation should happen only once - while scrolling down
+        });
+    </script>
 </body>
 </html>
